@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <Menu class="header"/>
     <div class="data-wrap">
       <v-navigation-drawer app clipped>
@@ -26,7 +25,6 @@
                     <v-switch label="woman" v-model="showWoman" color="blue-grey lighten-1" class="switch"></v-switch>
                   </div>
                 </div>
-                
                   <div class="sex">
                   <p class="field-words">Country</p>
                   <div class="filter-category">

@@ -1,113 +1,80 @@
 <template>
-  <div id="index">
-    <div id="wrap">
-      <div class="content">
-        <transition>
-            <h1 v-if="show">NEO-SOUL SUGGESTER</h1>
-        </transition>
-        <p>propose neo-soul music that suits your mood.</p>
-        <p class="btn" @click="$router.push('songs')">TRY</p>
-      </div>
+    <div>
+        <v-content class="index"> 
+            <v-container>
+                <v-row
+                justify="center"
+                align="center">
+                    <div class="wrap">
+                        <transition>
+                            <h1 v-if="show">NEO-SOUL<br>SUGGESTER</h1>
+                        </transition>
+                        <p>propose neo-soul music that suits your mood.</p>
+                        <p class="btn" @click="$router.push('songs')">TRY</p>
+                    </div>
+                </v-row>
+            </v-container>
+        </v-content>
     </div>
-  </div>
 </template>
 
 <script>
-
-
 export default {
-  components: {
-    
-  },
-  data(){
-    return{
-      show: false,
+    data(){
+        return{
+            show: false,
+        }
+    },
+    mounted(){
+        this.show = !this.show
     }
-  },
-  mounted(){
-    this.show = !this.show
-  }
 }
 </script>
 
 <style>
-#index {
-  margin: 0;
-  padding: 0;
-  color: #333333;
-  font-size: 15px;
-  line-height: 2;
-}
-*, *::before, *::after {
-  box-sizing: border-box;
-}
 
-p,h1,h2,h3,h4,h5,h6 {
-  margin-top: 0;
+.index{
+    background: url('../images/people.jpg') center center / cover no-repeat fixed;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    text-align: center;
 }
-
-img {
-  vertical-align:bottom;
+.index h1 {
+    font-size: 6rem;
+    line-height: 1;
+    color: #ffffff;
+    font-family: 'Bitter', serif;
+    margin-bottom: 10px;
 }
-
-#wrap {
-  clear: both;
-  padding-top: 80px;
-  margin-bottom: 178px;
+.wrap{
+    position: absolute;
+    top: 30%;
 }
-
-.content {
-  width: 960px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#index h1 {
-  font-size: 100px;
-  line-height: 1;
-  color: #ffffff;
-  font-family: 'Bitter', serif;
-  margin-bottom: 10px;
-}
-
-#index .content {
-  margin-top: 150px;
-}
-
-#index p {
-  font-size: 16px;
-  color: #ffffff;
-}
-
 .btn {
-  background-color: transparent;
-  color: #ffffff;
-  font-size: 20px;
-  font-family: 'Bitter', serif;
-  text-align: center;
-  line-height: 50px;
-  margin:50px auto ;
-  border-radius: 5px;
-  border: 2px solid  #ffffff;
-  width: 185px;
-  
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Bitter', serif;
+    text-align: center;
+    line-height: 50px;
+    margin:50px auto ;
+    border-radius: 5px;
+    border: 2px solid  #ffffff;
+    width: 185px;
+    transition: 0.3s;
 }
 
 .btn:hover {
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-  
-  cursor: pointer;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    cursor: pointer;
 }
 
-#index {
-  background-image: url(../images/people.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-}
 .v-enter-active {
     transition: opacity 3s;
 }
@@ -116,5 +83,49 @@ img {
 }
 .v-enter-to {
     opacity: 1;
+}
+
+/* --------------------------------
+* responsive
+* -------------------------------- */
+@media (max-width: 1024px) {
+    .index h1 {
+        font-size: 120px;
+    }
+    .wrap{
+        position: absolute;
+        top: 40%;
+    }
+    .btn {
+        font-size: 14px;
+        width: 140px;
+    }
+}
+@media (max-width: 800px) {
+    .index h1 {
+        font-size: 90px;
+    }
+    .wrap{
+        position: absolute;
+        top: 40%;
+    }
+    .btn {
+        font-size: 14px;
+        width: 120px;
+    }
+}
+@media (max-width: 767px) {
+    .index h1 {
+        font-size: 50px;
+    }
+    .wrap{
+        position: absolute;
+        top: 40%;
+    }
+    .btn {
+        font-size: 14px;
+        width: 120px;
+    }
+    
 }
 </style>

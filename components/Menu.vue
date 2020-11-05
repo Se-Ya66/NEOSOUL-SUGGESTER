@@ -81,12 +81,7 @@ img{
 /* --------------------------------
 * responsive
 * -------------------------------- */
-@media (max-width: 1024px) {
-    
-}
-@media (max-width: 800px) {
-    
-}
+
 @media (min-width:768px) {
     .hamb{
         display: none;

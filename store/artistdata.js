@@ -206,7 +206,7 @@ export const state = () =>({
         name:"Toshinobu Kubota",
         country:"Japan",
         sex:"man",
-        spotify:"https://open.spotify.com/embed/playlist/37i9dQZF1DX22iJutNVyST",
+        spotify:"https://open.spotify.com/embed/artist/45JvI0rkPkFFL14Cj0eput",
         label:"Sony",
         gender:true,
         other:true

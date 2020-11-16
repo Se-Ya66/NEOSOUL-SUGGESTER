@@ -10,7 +10,7 @@
             <v-app-bar-nav-icon 
             v-bind="attrs"
             v-on="on"
-            class="hamb">
+            class="hidden-sm-and-up hamb">
             </v-app-bar-nav-icon>
         </template>
         <v-list>
@@ -18,6 +18,7 @@
             v-for="(item, i) in items"
             :key="i"
             :to="item.link"
+            class="hidden-xs-only"
             >
                     <v-list-item-title
                     class="link">

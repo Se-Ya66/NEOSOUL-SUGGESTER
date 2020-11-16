@@ -13,14 +13,14 @@
             class="hidden-sm-and-up hamb">
             </v-app-bar-nav-icon>
         </template>
-        <v-list class="hidden-xs-only">
+        <v-list>
             <v-list-item
             v-for="(item, i) in items"
             :key="i"
             :to="item.link"
             >
                     <v-list-item-title
-                    class="link">
+                    class="hidden-xs-only link">
                     {{ item.title }}
                     </v-list-item-title>
             </v-list-item>

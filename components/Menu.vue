@@ -28,7 +28,7 @@
             </v-list-item>
         </v-list>
       </v-menu>
-      <v-toolbar-items class="d-xs-none nav">
+      <v-toolbar-items class="hidden-xs-only nav">
         <v-btn text @click="$router.push('songs')">SONGS</v-btn>
         <v-btn text @click="$router.push('database')">DATABASE</v-btn>
         <v-btn text @click="$router.push('about')">ABOUT</v-btn>

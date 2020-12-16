@@ -7,7 +7,6 @@
         align="center"
         justify="center"
       >
-
         <template v-for="(songlist, i) in songlists">
           <v-col
             cols="12"

@@ -140,7 +140,7 @@ import Menu from '~/components/Menu.vue'
 
 export default {
   components: {
-      Menu,
+    Menu,
   },
   data(){
     return{
@@ -151,19 +151,19 @@ export default {
       showUk:false,
       showOther:false,
       items:[
-            {   
-                title:'SONGS',
-                link:'/songs' 
-            },
-            {   
-                title:'DATABASE',
-                link:'/database' 
-            },
-            {   
-                title:'ABOUT',
-                link:'/about' 
-            }
-        ],
+        {   
+            title:'SONGS',
+            link:'/songs' 
+        },
+        {   
+            title:'DATABASE',
+            link:'/database' 
+        },
+        {   
+            title:'ABOUT',
+            link:'/about' 
+        }
+      ],
       drawer: false,
     }
   },
@@ -174,41 +174,41 @@ export default {
       for (let i=0; i<this.$store.state.artistdata.artists.length; i++) {
           let isShow = true;
           if (this.showMan && !this.$store.state.artistdata.artists[i].gender) {
-              isShow = false;
+            isShow = false;
           }
           if (this.showWoman && this.$store.state.artistdata.artists[i].gender) {
-              isShow = false;
+            isShow = false;
           }
           if (this.showWoman && this.showMan) {
-              isShow = true;
+            isShow = true;
           }
           if (this.showUs && !this.$store.state.artistdata.artists[i].us) {
-              isShow = false;
+            isShow = false;
           }
           if (this.showUk && !this.$store.state.artistdata.artists[i].uk) {
-              isShow = false;
+            isShow = false;
           }
           if (this.showOther && !this.$store.state.artistdata.artists[i].other) {
-              isShow = false;
+            isShow = false;
           }
           if (isShow) {
-              newList.push(this.$store.state.artistdata.artists[i]);
+            newList.push(this.$store.state.artistdata.artists[i]);
           }
       }
       for(let i in this.$store.state.artistdata.artists) {
           let artist = this.$store.state.artistdata.artists[i];
           if(artist.name.toLowerCase().includes(this.keyword)) {
-              newMembers.push(artist);
+            newMembers.push(artist);
           }else if(artist.name.toUpperCase().includes(this.keyword)){
-              newMembers.push(artist);
+            newMembers.push(artist);
           }
       }
       if(newMembers.length == 0){
-          return newList;
+        return newList;
       } else if(this.keyword){
-          return newMembers;
+        return newMembers;
       } else {
-          return newList;
+        return newList;
       }              
     }
   }
@@ -261,49 +261,49 @@ export default {
   margin-bottom: -10px;
 }
 .drawer-icon{
-    margin-left:170px;
+  margin-left:170px;
 }
 .artist-spotify{
   width:300px;
   height:200px;
 }
 @media (max-width:960px) {
-    .artist-name{
-        font-size: 20px;
-    }
-    .artist-data{
-        width:80%;
-    }
-    .record-label{
-        font-size: 12px;
-    }
+  .artist-name{
+    font-size: 20px;
+  }
+  .artist-data{
+    width:80%;
+  }
+  .record-label{
+    font-size: 12px;
+  }
 }
 @media (max-width: 767px) {
-    .artist-spotify{
-        width:100%;
-        height:200px;
-    }
-    .artist-name{
-        font-size: 18px;
-    }
-    .artist-data{
-        width:100%;
-    }
-    .record-label{
-        font-size: 10px;
-    }
-    .logo{
-      margin-left: -50px;
-    }
+  .artist-spotify{
+    width:100%;
+    height:200px;
+  }
+  .artist-name{
+    font-size: 18px;
+  }
+  .artist-data{
+    width:100%;
+  }
+  .record-label{
+    font-size: 10px;
+  }
+  .logo{
+    margin-left: -50px;
+  }
 }
 @media (min-width: 1025px) {
-    .header2{
-        display:none;
-    }
+  .header2{
+    display:none;
+  }
 }
 @media (max-width: 1024px) {
-    .header,.drawer{
-        display:none;
-    }
+  .header,.drawer{
+    display:none;
+  }
 }
 </style>

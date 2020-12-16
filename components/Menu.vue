@@ -18,13 +18,12 @@
             v-for="(item, i) in items"
             :key="i"
             :to="item.link"
-            
             >
-                    <v-list-item-title
-                    class="link"
-                    >
-                    {{ item.title }}
-                    </v-list-item-title>
+              <v-list-item-title
+              class="link"
+              >
+                {{ item.title }}
+              </v-list-item-title>
             </v-list-item>
         </v-list>
       </v-menu>
@@ -32,7 +31,7 @@
         <v-btn text @click="$router.push('songs')">SONGS</v-btn>
         <v-btn text @click="$router.push('database')">DATABASE</v-btn>
         <v-btn text @click="$router.push('about')">ABOUT</v-btn>
-    </v-toolbar-items>
+      </v-toolbar-items>
     </v-app-bar>
   </div>
 </template>
@@ -41,21 +40,21 @@
 export default {
   data(){
     return{
-        drawer: false,
-        items:[
-            {   
-                title:'SONGS',
-                link:'/songs' 
-            },
-            {   
-                title:'DATABASE',
-                link:'/database' 
-            },
-            {   
-                title:'ABOUT',
-                link:'/about' 
-            }
-        ],
+      drawer: false,
+      items:[
+        {   
+          title:'SONGS',
+          link:'/songs' 
+        },
+        {   
+          title:'DATABASE',
+          link:'/database' 
+        },
+        {   
+          title:'ABOUT',
+          link:'/about' 
+        }
+      ],
     }
   }
 }
@@ -63,7 +62,7 @@ export default {
 
 <style>
 .link{
-    color:#fff;
+  color:#fff;
 }
 .title{
   font-family: 'Noto Serif JP', serif;
@@ -86,7 +85,7 @@ img{
 
 @media (min-width:768px) {
     .hamb{
-        display: none;
+      display: none;
     }
     
 }

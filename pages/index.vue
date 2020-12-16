@@ -67,14 +67,12 @@ export default {
     width: 185px;
     transition: 0.3s;
 }
-
 .btn:hover {
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.15);
     color: #ffffff;
     cursor: pointer;
 }
-
 .v-enter-active {
     transition: opacity 3s;
 }
